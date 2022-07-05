@@ -18,6 +18,5 @@ contract("Certi", function (accounts) {
     assert.equal(result.grade, "S");
     assert.equal(result.date, "14-05-2022");
   });
-
   
 });

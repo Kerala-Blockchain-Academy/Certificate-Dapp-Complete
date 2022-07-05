@@ -4,30 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Issue New Certificate</title>
-  <script src="javascripts/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.3/web3.min.js" integrity="sha512-Ws+qbaGHSFw2Zc1e7XRpvW+kySrhmPLFYTyQ95mxAkss0sshj6ObdNP3HDWcwTs8zBJ60KpynKZywk0R8tG1GA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.3/web3.min.js"
+    integrity="sha512-Ws+qbaGHSFw2Zc1e7XRpvW+kySrhmPLFYTyQ95mxAkss0sshj6ObdNP3HDWcwTs8zBJ60KpynKZywk0R8tG1GA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="javascripts/app.js"></script>
 
   <link rel="stylesheet" href="stylesheets/normalize.min.css">
   <link rel='stylesheet' href='stylesheets/bootstrap.min.css'>
   <link rel='stylesheet' href='stylesheets/style.css' />
   <link rel='stylesheet' href='stylesheets/issueStyle.css' />
-
-  <script>
-    function issueCertificate() {
-      certificateID = document.getElementById("certificateID").value;
-      courseName = document.getElementById("courseName").value;
-      candidateName = document.getElementById("candidateName").value;
-      grade = document.getElementById("grade").value;
-      date = document.getElementById("date").value;
-      
-      myContract.methods.newCertificate(certificateID, courseName, candidateName, grade, date)
-        .send({ from: ethereum.selectedAddress, gasLimit: "927000" }).then((txn) => {
-          console.log(txn);
-          alert("Certificate Issue with Number: " + certificateID);
-        })
-    }
-  </script>
 
 </head>
 
@@ -40,7 +25,6 @@
       <a class="active" href="issueCertificate.html">Issue Certificate</a>
     </div>
   </div>
-
   <br />
   <div class="entry-form">
     <h3>Issue New Certificate</h3>

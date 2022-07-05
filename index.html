@@ -2,32 +2,14 @@
 <html>
 
 <head>
-  <script src="javascripts/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.3/web3.min.js" integrity="sha512-Ws+qbaGHSFw2Zc1e7XRpvW+kySrhmPLFYTyQ95mxAkss0sshj6ObdNP3HDWcwTs8zBJ60KpynKZywk0R8tG1GA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.3/web3.min.js"
+    integrity="sha512-Ws+qbaGHSFw2Zc1e7XRpvW+kySrhmPLFYTyQ95mxAkss0sshj6ObdNP3HDWcwTs8zBJ60KpynKZywk0R8tG1GA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="javascripts/app.js"></script>
 
   <link rel='stylesheet' href='stylesheets/style.css' />
   <link rel='stylesheet' href='stylesheets/searchStyle.css' />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-  <script>
-    function getCertificateDetails() {
-      certificateID = document.getElementById("certificateID").value;
-      myContract.methods.certificateDetails(certificateID)
-        .call({ from: ethereum.selectedAddress })
-        .then((result) => {
-          console.log(result);
-          localStorage.setItem("certificateID", certificateID);
-          localStorage.setItem("candidateName", result.candidateName);
-          localStorage.setItem("courseName", result.courseName);
-          localStorage.setItem("grade", result.grade);
-          localStorage.setItem("date", result.date);
-
-          var url = "viewCertificate.html";
-          window.location.href = url;
-        })
-    }
-  </script>
 </head>
 
 <body>
@@ -37,7 +19,6 @@
     <div class="header-right">
       <a class="active" href="index.html">Home</a>
       <a href="issueCertificate.html">Issue Certificate</a>
-
     </div>
   </div>
 
@@ -48,7 +29,6 @@
     <button onclick="connectToMetMask()" class="buttonZero" style="text-align: center;"><span>Login </span></button>
   </div>
 
-
   <div class="search" style="text-align: center;">
     <input type="text" id="certificateID" name="certificateID" class="searchTerm"
       placeholder="Enter Certificate ID to View">
@@ -56,7 +36,6 @@
       <i class="fa fa-search"></i>
     </button>
   </div>
-
 
 </body>
 

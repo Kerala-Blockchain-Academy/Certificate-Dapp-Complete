@@ -1,5 +1,5 @@
-const Migrations = artifacts.require("Certi");
+const Certi = artifacts.require("Certi");
 
 module.exports = function (deployer) {
-  deployer.deploy(Migrations);
+  deployer.deploy(Certi);
 };

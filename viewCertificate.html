@@ -7,13 +7,13 @@
   <link rel='stylesheet' href='stylesheets/bootstrap.min.css'>
   <link rel="stylesheet" href="stylesheets/viewStyle.css">
   <script>
-    window.onload = function () {
-      document.getElementById("certificateID").innerHTML = "Certificate No: " + localStorage.getItem("certificateID");
-      document.getElementById("candidateName").innerHTML = localStorage.getItem("candidateName");
-      document.getElementById("courseName").innerHTML = localStorage.getItem("courseName");
+    window.onload = () => {
+      document.getElementById("certificateID").innerHTML = "Certificate No: " + localStorage.getItem("certificateID")
+      document.getElementById("candidateName").innerHTML = localStorage.getItem("candidateName")
+      document.getElementById("courseName").innerHTML = localStorage.getItem("courseName")
       document.getElementById("grade").innerHTML = localStorage.getItem("grade"); + " Grade"
-      document.getElementById("date").innerHTML = "Date Issued: " + localStorage.getItem("date");
-    };
+      document.getElementById("date").innerHTML = "Date Issued: " + localStorage.getItem("date")
+    }
   </script>
 </head>
 
