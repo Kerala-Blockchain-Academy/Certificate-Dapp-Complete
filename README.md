@@ -1,28 +1,31 @@
-# Certificate-Dapp-EB
+# Certificate-Dapp-Complete
 
-The application only uses a combination of client side scripting and Metamask wallet
+Final result for Stage-2 DApp development.
 
-Most of the steps are only reuired when runninig for the first time, please keep that in mind.
+## 🛠 Built With
 
-### Feedback: [Link](https://docs.google.com/forms/d/e/1FAIpQLScCw_pd3-o2x9XJk2UXDIxIauBQVz1vlghkKNJtgo62patRCw/viewform?usp=sf_link)
+<div align="left">
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/DEMYSTIF/DEMYSTIF/main/assets/icons/javascript.svg" width="36" height="36" alt="JavaScript" /></a>
+<a href="https://docs.web3js.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/DEMYSTIF/DEMYSTIF/main/assets/icons/web3js.svg" width="36" height="36" alt="Web3JS" /></a>
+<a href="https://metamask.io/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/DEMYSTIF/DEMYSTIF/main/assets/icons/metamask.svg" width="36" height="36" alt="Web3JS" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/DEMYSTIF/DEMYSTIF/main/assets/icons/html5.svg" width="36" height="36" alt="Web3JS" /></a>
+<a href="https://bulma.io/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/DEMYSTIF/DEMYSTIF/main/assets/icons/bulma.svg" width="36" height="36" alt="Bulma" /></a>
+</div>
 
-## Setting up the development environment 
+## ⚙️ Run Locally
 
-Before we start we need some tools and dependencies. Please install the following:
+Clone the project
 
-1. Node.js and npm (comes with Node)
-2. MetaMask Wallet
+```bash
+git clone https://github.com/Kerala-Blockchain-Academy/Certificate-Dapp-Complete.git
+```
 
-## Setting up MetaMask Wallet
-1. Install MetaMask wallet to your browser.  
-2. Connect to Ganache client simulation. 
+Go to the project directory
 
-## Compiling and deploying the smart contract.
-1. Run Ganache GUI or CLI
-2. Excute the command `truffle migrate` in the project directory
+```bash
+cd Certificate-Dapp-Complete
+```
 
-## Installation
-Install all other dependencies using following command: `npm install`
+Replace the **abi** and **contract address** in **'app.js'** with yours.
 
-## Run Dapp
-Execute the command: `npm start`
+Serve **'.html'** files with extensions like 'Live Preview' in VS Code.
