@@ -1,39 +1,36 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.17;
+pragma solidity 0.8.18;
 
-contract Certi {
+contract Cert {
     address admin;
+    event Issued(string indexed course, uint256 id, string grade);
 
     constructor() {
         admin = msg.sender;
     }
 
     modifier onlyAdmin() {
-        require(msg.sender == admin, "Insufficient privilege");
+        require(msg.sender == admin, "Access Denied");
         _;
     }
 
-    struct certificate {
-        string courseName;
-        string candidateName;
+    struct Certificate {
+        string name;
+        string course;
         string grade;
         string date;
     }
 
-    mapping(string => certificate) public certificateDetails;
+    mapping(uint256 => Certificate) public Certificates;
 
-    function newCertificate(
-        string memory _certificateID,
-        string memory _courseName,
-        string memory _candidateName,
+    function issue(
+        uint256 _id,
+        string memory _name,
+        string memory _course,
         string memory _grade,
         string memory _date
     ) public onlyAdmin {
-        certificateDetails[_certificateID] = certificate(
-            _courseName,
-            _candidateName,
-            _grade,
-            _date
-        );
+        Certificates[_id] = Certificate(_name, _course, _grade, _date);
+        emit Issued(_course, _id, _grade);
     }
 }
