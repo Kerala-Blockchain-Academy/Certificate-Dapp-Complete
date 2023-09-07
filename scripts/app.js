@@ -117,9 +117,10 @@ issueCertificate = async () => {
   let courseName = document.getElementById("courseName").value;
   let grade = document.getElementById("grade").value;
   let date = document.getElementById("date").value;
+  let accounts = await ethereum.request({ method: "eth_requestAccounts" });
   let trxReceipt = await MyContract.methods
     .issue(certificateID, candidateName, courseName, grade, date)
-    .send({ from: ethereum.selectedAddress, gasLimit: 500000 });
+    .send({ from: accounts[0], gasLimit: 500000 });
   console.log("Trx: ", trxReceipt);
   alert(`Certificate is issued for ${certificateID}!`);
 };
